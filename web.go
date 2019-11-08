@@ -8,7 +8,7 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	resp, err := http.Get("http://google.com")
+	resp, err := http.Get("http://cricinfo.com")
 	if err != nil {
 		panic(err)
 	}
@@ -19,7 +19,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	log.Print("Google search is ready")
+	log.Print("Cricket news")
 	http.HandleFunc("/", handler)
 	http.ListenAndServe(":8080", nil)
 }
