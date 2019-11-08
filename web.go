@@ -8,7 +8,7 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	resp, err := http.Get("https://www.espncricinfo.com/)
+	resp, err := http.Get("https://www.espncricinfo.com/")
 	if err != nil {
 		panic(err)
 	}
