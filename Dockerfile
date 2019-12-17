@@ -3,5 +3,6 @@ COPY web.go .
 RUN go build -o /web .
 
 FROM alpine:3.10
+RUN apk update
 CMD ["./web"]
 COPY --from=builder /web .
